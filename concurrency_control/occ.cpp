@@ -24,8 +24,7 @@ RC MyOCC::validate(TxnMgr * txn) {
 				txn->swap_accesses(i,j);
 			}
 		}
-	}
-
+        }
 	std::set<uint64_t> write_rowid;
 	std::vector<uint64_t> read_accessid;
 	for(uint64_t i=0;i<txn->access_get_cnt();i++){
@@ -49,7 +48,6 @@ RC MyOCC::validate(TxnMgr * txn) {
 			break;
 		}		
 	}
-
 	return rc;
 }
 
